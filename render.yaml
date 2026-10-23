@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: xiaobai-music
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: "7860"
+      - key: METING_URL
+        value: https://api.mxin.me/api/v1/meting
